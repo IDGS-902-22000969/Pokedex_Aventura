@@ -1,0 +1,36 @@
+.pokemon-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 14px 16px;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(47, 54, 77, .08);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  overflow: hidden;
+}
+.pokemon-card:hover { transform: translateY(-6px); border-color: #ffcf42; box-shadow: 0 14px 28px rgba(47,54,77,.13); }
+.pokemon-number { align-self: flex-end; color: #9aa0ad; font-size: .78rem; font-weight: 800; }
+.pokemon-art { width: 100%; aspect-ratio: 1; display: grid; place-items: center; background: #fff7df; border-radius: 18px; margin: 8px 0 12px; }
+.pokemon-art img { width: 88%; height: 88%; object-fit: contain; filter: drop-shadow(0 7px 5px rgba(0,0,0,.12)); }
+.pokemon-card h3 { margin: 0 0 10px; text-transform: capitalize; font-size: 1.12rem; }
+.type-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+.type-pill { padding: 4px 10px; border-radius: 30px; background: #edf0f4; color: #434a57; font-size: .72rem; font-weight: 800; text-transform: capitalize; }
+.type-grass { background: #d8f4d4; color: #287b37; }
+.type-fire { background: #ffe0d5; color: #bd4828; }
+.type-water { background: #d8eaff; color: #2865b1; }
+.type-electric { background: #fff1b8; color: #987000; }
+.type-bug { background: #e7f2c7; color: #617c20; }
+.type-poison { background: #efdafa; color: #8244a1; }
+.type-fairy { background: #ffe0ef; color: #a33f75; }
+.type-psychic { background: #ffdce8; color: #a33b62; }
+.type-rock, .type-ground { background: #eee2c6; color: #82652c; }
+.type-ghost, .type-dark { background: #e0dcef; color: #514477; }
+.type-fighting { background: #f8d8cf; color: #9a3c28; }
+.type-ice { background: #d7f6f5; color: #287c80; }
+.type-dragon { background: #dddafa; color: #5544a0; }
+.type-steel { background: #e1e7ee; color: #596779; }
+.type-flying { background: #e5e7fb; color: #6265a5; }
+.card-more { margin-top: 14px; font-size: .78rem; font-weight: 800; color: var(--red); }

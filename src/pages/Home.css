@@ -1,0 +1,45 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  min-height: 390px;
+  margin: 28px auto 54px;
+  padding: 40px clamp(24px, 6vw, 76px);
+  max-width: 1320px;
+  border-radius: 32px;
+  background: linear-gradient(120deg, #ffe58b 0%, #ffd34f 54%, #ffb4a5 100%);
+  overflow: hidden;
+}
+.hero-copy { max-width: 620px; position: relative; z-index: 1; }
+.eyebrow { color: #d34b3d; font-size: .76rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.hero h1 { margin: 12px 0; font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.03; letter-spacing: -.05em; }
+.hero h1 span { color: #d94a3e; }
+.hero p { max-width: 480px; color: #5d5260; font-size: 1.05rem; line-height: 1.6; }
+.hero-button { margin-top: 12px; background: #e94d42; color: white; }
+.hero-visual { position: relative; min-height: 300px; display: grid; place-items: center; }
+.hero-visual img { position: relative; z-index: 1; width: min(100%, 340px); filter: drop-shadow(0 18px 12px rgba(111,73,25,.22)); animation: float 4s ease-in-out infinite; }
+.hero-sun { position: absolute; width: 280px; height: 280px; border-radius: 50%; background: rgba(255,255,255,.42); }
+.spark { position: absolute; color: white; font-size: 2.5rem; }
+.spark-one { top: 15%; left: 10%; }.spark-two { right: 9%; bottom: 16%; }
+@keyframes float { 50% { transform: translateY(-12px) rotate(2deg); } }
+.catalog-section { max-width: 1320px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 48px) 64px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
+.section-heading h2 { margin: 6px 0; font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.section-heading p { margin: 0; color: var(--muted); }
+.search-box { width: min(100%, 320px); display: flex; align-items: center; gap: 10px; padding: 12px 16px; border: 2px solid #eee7d9; border-radius: 15px; background: white; color: #9ca2ae; }
+.search-box input { width: 100%; border: 0; outline: 0; color: var(--ink); background: transparent; }
+.search-box button { border: 0; background: transparent; color: #7c8290; font-size: 1.3rem; cursor: pointer; }
+.pokemon-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+.status-message { min-height: 220px; display: grid; place-content: center; text-align: center; color: var(--muted); }
+.error-message { color: #b83232; }
+.pokeball-loader { color: var(--red); font-size: 2.5rem; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.pagination { display: flex; justify-content: center; align-items: center; gap: 18px; margin-top: 32px; color: var(--muted); font-weight: 700; }
+@media (max-width: 1000px) { .pokemon-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; text-align: center; margin: 18px; padding: 32px 22px; }
+  .hero-copy { margin: auto; }.hero-visual { min-height: 220px; }.hero-visual img { width: 220px; }.hero-sun { width: 190px; height: 190px; }
+  .section-heading { align-items: stretch; flex-direction: column; }.search-box { width: auto; }
+  .pokemon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .pagination { flex-wrap: wrap; }
+}

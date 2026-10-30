@@ -1,0 +1,8 @@
+.favorites-page { max-width: 1180px; margin: 54px auto 80px; padding: 0 24px; min-height: 55vh; }
+.favorites-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 30px; }
+.favorites-heading h1 { margin: 7px 0; font-size: clamp(2rem, 4vw, 3rem); }.favorites-heading p { margin: 0; color: var(--muted); }
+.empty-favorites { text-align: center; padding: 55px 20px; background: white; border-radius: 25px; }.empty-favorites div { font-size: 4rem; color: #e75b50; }.empty-favorites p { color: var(--muted); margin-bottom: 24px; }
+.favorite-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.favorite-item { display: flex; align-items: center; gap: 16px; padding: 14px; background: white; border-radius: 18px; box-shadow: 0 6px 18px rgba(47,54,77,.06); }
+.favorite-item:hover { transform: translateY(-3px); }.favorite-item img { width: 76px; height: 76px; object-fit: contain; background: #fff7df; border-radius: 14px; }.favorite-item div { display: flex; flex-direction: column; gap: 5px; flex: 1; }.favorite-item small { color: #9aa0ad; }.favorite-item > span { color: var(--red); font-size: 1.3rem; }
+@media (max-width: 760px) { .favorites-heading { align-items: start; flex-direction: column; }.favorite-grid { grid-template-columns: 1fr; } }
